@@ -1,6 +1,7 @@
-import pdfkit
-from pathlib import Path
 import os
+from pathlib import Path
+
+import pdfkit
 
 os.chdir(str(Path(__file__).absolute().parent))
 
