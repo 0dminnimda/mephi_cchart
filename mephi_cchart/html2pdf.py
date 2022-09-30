@@ -15,5 +15,3 @@ config = pdfkit.configuration(wkhtmltopdf="wkhtmltox/bin/wkhtmltopdf.exe")
 pdfkit.from_file(
     "build/html/index.html", "out.pdf", configuration=config, options=options, verbose=True
 )
-
-# "ChromeHtmlToPdf/ChromeHtmlToPdfConsole.exe" --input ./source/index.html --output ./index.pdf
