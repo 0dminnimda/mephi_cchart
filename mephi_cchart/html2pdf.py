@@ -15,4 +15,4 @@ pdfkit.from_file(
     "build/html/index.html", "out.pdf", configuration=config, options=options, verbose=True
 )
 
-# "ChromeHtmlToPdf/ChromeHtmlToPdfConsole.exe" --input ./build/html/index.html --output ./google.pdf
+# "ChromeHtmlToPdf/ChromeHtmlToPdfConsole.exe" --input ./source/index.html --output ./index.pdf
