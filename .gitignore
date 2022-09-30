@@ -152,3 +152,4 @@ cython_debug/
 #.idea/
 
 /mephi_cchart/ChromeHtmlToPdf
+/mephi_cchart/index.pdf
