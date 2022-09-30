@@ -1,6 +1,7 @@
-import requests
-from pathlib import Path
 import os
+from pathlib import Path
+
+import requests
 
 os.chdir(str(Path(__file__).absolute().parent))
 
