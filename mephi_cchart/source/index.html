@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, flowchart: { useMaxWidth: false } });</script>
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  <style>
+    #container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    #container > img {
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="document">
+    <div class="documentwrapper">
+      <div class="body" role="main">
+        <p align="center">
+          <font size="+1">
+            Национальный исследовательский ядерный университет «МИФИ»<br><br>
+            Институт интеллектуальных кибернетических систем<br><br>
+            Кафедра №12 «Компьютерные системы и технологии»<br><br>
+          </font>
+        </p>
+        <br>
+        <p align="middle">
+          <img width="200" height="200" alt="gg" src="_static/logo_mifi.png">
+          <!-- <img width="200" alt="gg" src="_static/ICIS_logo.png"> -->
+          <img width="200" height="200" alt="gg" src="_static/icis_logo.jpg">
+          <img width="200" height="200" alt="gg" src="_static/ksit_logo.svg">
+        </p>
+        <div id="container">
+          <img width="200" alt="gg" src="_static/logo_mifi.png">
+          <img width="200" alt="gg" src="_static/icis_logo.jpg">
+          <img width="200" alt="gg" src="_static/ksit_logo.svg">
+        </div>
+        <center>
+          <table class="colwidths-auto docutils align-default" style="border: none;">
+            <thead>
+              <tr class="row-odd">
+                <th class="head">
+                  <p><img width="200" alt="gg" src="_static/logo_mifi.png"></p>
+                </th>
+                <th class="head">
+                  <p><img width="200" alt="gg" src="_static/icis_logo.jpg"></p>
+                </th>
+                <th class="head">
+                  <p><img width="200" alt="gg" src="_static/ksit_logo.svg"></p>
+                </th>
+              </tr>
+            </thead>
+          </table>
+        </center>
+        <br>
+        <p align="center">
+          <font size="+1">
+            <b>
+              <font size="+3">
+                ОТЧЕТ<br>
+              </font>
+              О выполнении лабораторной работы №1<br>
+              «Изучение принципов сложения целых чисел»<br>
+            </b>
+          </font>
+        </p>
+        <div class="mermaid">
+          flowchart RL
+          subgraph SG0 [&quot; &quot;]
+          direction TB
+          n0_0[&quot;maximize(n)&quot;] --&gt; n0_1[&quot;size = ceil(log10(n))&quot;]
+          n0_1 --&gt; n0_2[&quot;sorted = 0&quot;]
+          n0_2 --&gt; n0_3[&quot;sorted = 1&quot;]
+          n0_3 --&gt; n0_4[&quot;offset = 1&quot;]
+          n0_4 --&gt; n0_5{{&quot;i = 0; i &lt; size - 1; i++&quot;}}
+          n0_5 --&gt; n0_13{&quot;sorted != 1&quot;}
+          n0_13 --&gt; |true| n0_3
+          n0_5 --&gt; n0_6[&quot;digit1 = n / (offset*10) % 10&quot;]
+          n0_6 --&gt; n0_7[&quot;digit2 = n / (offset ) % 10&quot;]
+          n0_7 --&gt; n0_8{&quot;digit1 &gt; digit2&quot;}
+          n0_8 --&gt; |true| n0_9[&quot;n = n - digit1 * offset * 10 + digit2 * offset * 10&quot;]
+          n0_9 --&gt; n0_10[&quot;n = n - digit2 * offset + digit1 * offset &quot;]
+          n0_10 --&gt; n0_11[&quot;sorted = 0&quot;]
+          n0_11 --&gt; n0_12[&quot;offset *= 10&quot;]
+          n0_8 --&gt; |false| n0_12
+          n0_12 --&gt; n0_5
+
+          end
+          subgraph SG1 [&quot; &quot;]
+          direction TB
+          n1_0[начало] --&gt; n1_1[/ввод n/] --&gt; n1_2{n &gt; 0}
+          n1_2 --&gt; |true| n1_3[/&quot;вывести: maximize(n)&quot;/]
+          n1_2 --&gt; |false| n1_4[/&quot;вывести: It's not an integer ;(\nSorry, but you'll have to enter an integer
+          next time!\n&quot;/]
+          n1_3 &amp; n1_4 --&gt; n1_5[конец]
+          end
+        </div><img alt="_images/graph.svg" src="_images/graph.svg" />
+
+      </div>
+
+    </div>
+    <div class="clearer"></div>
+  </div>
+</body>
+
+</html>
