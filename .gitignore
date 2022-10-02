@@ -152,7 +152,8 @@ cython_debug/
 #.idea/
 
 /mephi_cchart/ChromeHtmlToPdf
-/mephi_cchart/index.pdf
+/mephi_cchart/source/final.pdf
+/mephi_cchart/source/final.html
 
 /mephi_cchart/compilation/
 /mephi_cchart/private_data.py
