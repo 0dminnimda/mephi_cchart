@@ -153,3 +153,5 @@ cython_debug/
 
 /mephi_cchart/ChromeHtmlToPdf
 /mephi_cchart/index.pdf
+
+/mephi_cchart/compilation/
