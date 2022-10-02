@@ -11,7 +11,7 @@
   <script>mermaid.initialize({ startOnLoad: true, flowchart: { useMaxWidth: false } });</script>
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  
+
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <div class="documentwrapper">
       <div class="body" role="main">
 
-<!-- strart -->
+        <!-- strart -->
 
         <style>
           #container {
@@ -31,6 +31,15 @@
 
           #container>img {
             object-fit: contain;
+          }
+
+          pre.bash {
+            background-color: black;
+            color: white;
+            font-size: medium;
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+            width: 100%;
+            display: inline-block;
           }
         </style>
         <p align="center">
@@ -46,52 +55,68 @@
           <img width="200" alt="icis_logo" src="_static/icis_logo.jpg">
           <img width="200" alt="ksit_logo" src="_static/ksit_logo.svg">
         </div>
-        <p><br><br><br><br><br></p>
+        <p><br><br><br></p>
         <p align="center">
           <font size="+1">
             <b>
               <font size="+3">
                 ОТЧЕТ<br>
               </font>
-              О выполнении лабораторной работы №1<br>
+              О выполнении лабораторной работы №{LAB-ID}<br>
               «Изучение принципов сложения целых чисел»<br>
             </b>
           </font>
         </p>
         <p><br><br><br><br><br><br><br><br><br><br></p>
+        <p align="right">
+          <b>Студент:</b> {STUDENT-NAME}<br>
+          <b>Группа:</b> {GROUP-ID}<br>
+          <b>Преподаватель:</b> {TEACHER-NAME}<br>
+        </p>
+        <p align="center">
+          {LOCATION} — {YEAR}
+        </p>
+        <p>
+          <font size="+2"><b>1. Формулировка индивидуального задания<b></font>
+        </p>
+        <p>{PROBLEM}</p>
+        <p>
+          <font size="+2"><b>2. Описание использованных типов данных<b></font>
+        </p>
+        <p>{USED-DATA-TYPES}</p>
+        <p>
+          <font size="+2"><b>3. Описание использованного алгоритма<b></font>
+        </p>
         <div class="mermaid">
-          flowchart RL
-          subgraph SG0 [&quot; &quot;]
-          direction TB
-          n0_0[&quot;maximize(n)&quot;] --&gt; n0_1[&quot;size = ceil(log10(n))&quot;]
-          n0_1 --&gt; n0_2[&quot;sorted = 0&quot;]
-          n0_2 --&gt; n0_3[&quot;sorted = 1&quot;]
-          n0_3 --&gt; n0_4[&quot;offset = 1&quot;]
-          n0_4 --&gt; n0_5{{&quot;i = 0; i &lt; size - 1; i++&quot;}}
-          n0_5 --&gt; n0_13{&quot;sorted != 1&quot;}
-          n0_13 --&gt; |true| n0_3
-          n0_5 --&gt; n0_6[&quot;digit1 = n / (offset*10) % 10&quot;]
-          n0_6 --&gt; n0_7[&quot;digit2 = n / (offset ) % 10&quot;]
-          n0_7 --&gt; n0_8{&quot;digit1 &gt; digit2&quot;}
-          n0_8 --&gt; |true| n0_9[&quot;n = n - digit1 * offset * 10 + digit2 * offset * 10&quot;]
-          n0_9 --&gt; n0_10[&quot;n = n - digit2 * offset + digit1 * offset &quot;]
-          n0_10 --&gt; n0_11[&quot;sorted = 0&quot;]
-          n0_11 --&gt; n0_12[&quot;offset *= 10&quot;]
-          n0_8 --&gt; |false| n0_12
-          n0_12 --&gt; n0_5
-
-          end
-          subgraph SG1 [&quot; &quot;]
-          direction TB
-          n1_0[начало] --&gt; n1_1[/ввод n/] --&gt; n1_2{n &gt; 0}
-          n1_2 --&gt; |true| n1_3[/&quot;вывести: maximize(n)&quot;/]
-          n1_2 --&gt; |false| n1_4[/&quot;вывести: It's not an integer ;(\nSorry, but you'll have to enter an integer
-          next time!\n&quot;/]
-          n1_3 &amp; n1_4 --&gt; n1_5[конец]
-          end
+          {MERMAID-CODE}
         </div>
+        <p>
+          <font size="+2"><b>4. Исходные коды разработанных программ<b></font>
+        </p>
+        <p>Листинг 1: Исходные коды программы {PROGRAM-NAME} (файл: {PROGRAM-FILE})</p>
+        <div class="highlight-c notranslate">
+          <div class="highlight">
+            <pre><span></span><span class="p">{</span><span class="n">C</span><span class="o">-</span><span class="n">CODE</span><span class="p">}</span><span class="w"></span>
+</pre>
+          </div>
+        </div>
+        <p>
+          <font size="+2"><b>5. Описание тестовых примеров<b></font>
+        </p>
+        <p>{TEST-EXAMPLES}</p>
+        <p>
+          <font size="+2"><b>6. Скриншоты<b></font>
+        </p>
+        <pre class="bash">
+{SCREENSHOTS}
+</pre>
+        <p>Рис. 3: Сборка и запуск программы {PROGRAM-NAME}</p>
+        <p>
+          <font size="+2"><b>7. Выводы<b></font>
+        </p>
+        <p>{CONCLUSIONS}</p>
 
-<!-- end -->
+        <!-- end -->
 
       </div>
     </div>

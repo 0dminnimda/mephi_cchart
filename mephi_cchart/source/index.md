@@ -8,6 +8,14 @@
  #container > img {
    object-fit: contain;
  }
+ pre.bash {
+  background-color: black;
+  color: white;
+  font-size: medium;
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+  width: 100%;
+  display: inline-block;
+ }
 </style>
 
 <p align="center">
@@ -34,7 +42,7 @@
          <font size="+3">
             ОТЧЕТ<br>
          </font>
-         О выполнении лабораторной работы №1<br>
+         О выполнении лабораторной работы №{LAB-ID}<br>
          «Изучение принципов сложения целых чисел»<br>
       </b>
    </font>
@@ -42,33 +50,50 @@
 
 <br><br><br><br><br><br><br><br><br><br>
 
+<p align="right">
+   <b>Студент:</b> {STUDENT-NAME}<br>
+   <b>Группа:</b> {GROUP-ID}<br>
+   <b>Преподаватель:</b> {TEACHER-NAME}<br>
+</p>
+
+<p align="center">
+   {LOCATION} — {YEAR}
+</p>
+
+<font size="+2"><b>1. Формулировка индивидуального задания<b></font>
+
+{PROBLEM}
+
+<font size="+2"><b>2. Описание использованных типов данных<b></font>
+
+{USED-DATA-TYPES}
+
+<font size="+2"><b>3. Описание использованного алгоритма<b></font>
+
 ```{mermaid}
-flowchart RL
-   subgraph SG0 [" "]
-      direction TB
-      n0_0["maximize(n)"] --> n0_1["size = ceil(log10(n))"]
-      n0_1 --> n0_2["sorted = 0"]
-      n0_2 --> n0_3["sorted = 1"]
-      n0_3 --> n0_4["offset = 1"]
-      n0_4 --> n0_5{{"i = 0; i < size - 1; i++"}}
-      n0_5 --> n0_13{"sorted != 1"}
-      n0_13 --> |true| n0_3
-      n0_5 --> n0_6["digit1 = n / (offset*10) % 10"]
-      n0_6 --> n0_7["digit2 = n / (offset   ) % 10"]
-      n0_7 --> n0_8{"digit1 > digit2"}
-      n0_8 --> |true| n0_9["n = n - digit1 * offset * 10 + digit2 * offset * 10"]
-      n0_9 --> n0_10["n = n - digit2 * offset      + digit1 * offset     "]
-      n0_10 --> n0_11["sorted = 0"]
-      n0_11 --> n0_12["offset *= 10"]
-      n0_8 --> |false| n0_12
-      n0_12 --> n0_5
-       
-   end
-   subgraph SG1 [" "]
-      direction TB
-      n1_0[начало] --> n1_1[/ввод n/] --> n1_2{n > 0}
-      n1_2 --> |true| n1_3[/"вывести: maximize(n)"/]
-      n1_2 --> |false| n1_4[/"вывести: It's not an integer ;(\nSorry, but you'll have to enter an integer next time!\n"/]
-      n1_3 & n1_4 --> n1_5[конец]
-   end
+{MERMAID-CODE}
 ```
+
+<font size="+2"><b>4. Исходные коды разработанных программ<b></font>
+
+Листинг 1: Исходные коды программы {PROGRAM-NAME} (файл: {PROGRAM-FILE})
+
+```c
+{C-CODE}
+```
+
+<font size="+2"><b>5. Описание тестовых примеров<b></font>
+
+{TEST-EXAMPLES}
+
+<font size="+2"><b>6. Скриншоты<b></font>
+
+<pre class="bash">
+{SCREENSHOTS}
+</pre>
+
+Рис. 3: Сборка и запуск программы {PROGRAM-NAME}
+
+<font size="+2"><b>7. Выводы<b></font>
+
+{CONCLUSIONS}
