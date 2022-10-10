@@ -14,7 +14,12 @@ def make_final_html(template: str, terminal: str, repl: dict, final: str) -> Non
     Path(final).write_text(text, "utf-8")
 
     render_terminal_png(
-        terminal, repl["SCREENSHOTS"], margin=30, line_offset=6, font="Consola"
+        terminal,
+        repl["SCREENSHOTS"],
+        margin=30,
+        line_offset=6,
+        font="Consola",
+        min_line_length=30,
     )
 
 
