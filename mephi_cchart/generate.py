@@ -1,9 +1,6 @@
-import os
 import shlex
 import subprocess
 from pathlib import Path
-
-os.chdir(str(Path(__file__).absolute().parent))
 
 from public_data import repl
 
@@ -24,8 +21,11 @@ def render_pdf(inp, out):
     return subprocess.call(args)
 
 
-template = "./source/template.html"
-final = "./source/final.html"
+if __name__ == "__main__":
+    import fix_dir
 
-make_final_html(template, repl, final)
-print(render_pdf(final, final[:-4] + "pdf"))
+    template = "./source/template.html"
+    final = "./source/final.html"
+
+    make_final_html(template, repl, final)
+    print(render_pdf(final, final[:-4] + "pdf"))
