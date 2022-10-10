@@ -1,5 +1,3 @@
-import shlex
-import subprocess
 from pathlib import Path
 
 from public_data import repl
@@ -12,13 +10,6 @@ def make_final_html(template: str, repl: dict, final: str) -> None:
         text = text.replace("{" + name + "}", str(value))
 
     Path(final).write_text(text, "utf-8")
-
-
-def render_pdf(inp, out):
-    args = shlex.split(
-        f"ChromeHtmlToPdf/ChromeHtmlToPdfConsole.exe --input {inp} --output {out}"
-    )
-    return subprocess.call(args)
 
 
 if __name__ == "__main__":
