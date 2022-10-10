@@ -80,7 +80,7 @@
 
 <font size="+2"><b>6. Скриншоты<b></font>
 
-<img alt="terminal" src="terminal.png">
+<img width="400" alt="terminal" src="terminal.png">
 
 Рис. 3: Сборка и запуск программы {PROGRAM-NAME}
 
