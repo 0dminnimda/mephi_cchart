@@ -21,7 +21,8 @@ def render_pdf_pdfkit(html_path: str, pdf_path: str) -> None:
 
 def render_pdf(html_path: str, pdf_path: Optional[str] = None):
     if pdf_path is None:
-        pdf_path = str(Path(html_path).with_suffix(".pdf"))
+        if html_path.endswith(".html"):
+            pdf_path = html_path[:-len(".html")] + ".pdf"
 
     exe = "ChromeHtmlToPdf/ChromeHtmlToPdfConsole.exe"
     args = shlex.split(f"{exe} --input {html_path} --output {pdf_path}")
@@ -31,7 +32,6 @@ def render_pdf(html_path: str, pdf_path: Optional[str] = None):
 if __name__ == "__main__":
     import fix_dir
 
-    template = "./source/template.html"
     final = "./source/final.html"
 
     print(render_pdf(final))
