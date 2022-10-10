@@ -8,14 +8,6 @@
  #container > img {
    object-fit: contain;
  }
- pre.bash {
-  background-color: black;
-  color: white;
-  font-size: medium;
-  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
-  width: 100%;
-  display: inline-block;
- }
 </style>
 
 <p align="center">
@@ -88,9 +80,7 @@
 
 <font size="+2"><b>6. Скриншоты<b></font>
 
-<pre class="bash">
-{SCREENSHOTS}
-</pre>
+<img alt="terminal" src="terminal.png">
 
 Рис. 3: Сборка и запуск программы {PROGRAM-NAME}
 
