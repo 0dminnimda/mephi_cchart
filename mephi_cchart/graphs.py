@@ -1,9 +1,10 @@
 from pathlib import Path
 
-import requests
+import requests  # type: ignore
 
 
-# possible types: https://github.com/yuzutech/kroki/blob/c60c44066ac38378be802c44fd5cca2cb54f530d/server/src/main/java/io/kroki/server/Server.java#L105
+# possible types:
+# https://github.com/yuzutech/kroki/blob/c60c44066ac38378be802c44fd5cca2cb54f530d/server/src/main/java/io/kroki/server/Server.java#L105
 # https://github.com/yuzutech/kroki/blob/a853c5422f168cfdd04f331e04b92a6e21eae43a/tests/smoke/smoke.js#L1
 def render_graph(source: str, type: str, format: str) -> bytes:
     json = {
