@@ -18,9 +18,9 @@ flowchart RL
       n0_2 --> n0_3["sorted = 1"]
       n0_3 --> n0_4["offset = 1"]
       n0_4 --> n0_5{{"i = 0; i < size - 1; i++"}}
-      n0_5 --> n0_13{"sorted != 1"}
+      n0_5 --> |false| n0_13{"sorted != 1"}
       n0_13 --> |true| n0_3
-      n0_5 --> n0_6["digit1 = n / (offset*10) % 10"]
+      n0_5 --> |true| n0_6["digit1 = n / (offset*10) % 10"]
       n0_6 --> n0_7["digit2 = n / (offset   ) % 10"]
       n0_7 --> n0_8{"digit1 > digit2"}
       n0_8 --> |true| n0_9["n = n - digit1 * offset * 10 + digit2 * offset * 10"]
@@ -46,7 +46,63 @@ int main() {
    return 0;
 }
 """,
-    "TEST-EXAMPLES": "",
+    "TEST-EXAMPLES": """
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Значение a</th>
+    <th class="tg-0pky">Ожидаемое значение<br>result</th>
+    <th class="tg-0pky">Полученное значение<br>result</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">55</td>
+    <td class="tg-0pky">55</td>
+    <td class="tg-0pky">55</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">20000002</td>
+    <td class="tg-0pky">22</td>
+    <td class="tg-0pky">22</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">ошибка</td>
+    <td class="tg-0pky">ошибка</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">20</td>
+    <td class="tg-0lax">2</td>
+    <td class="tg-0lax">2</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">155</td>
+    <td class="tg-0lax">155</td>
+    <td class="tg-0lax">155</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">32849263</td>
+    <td class="tg-0lax">22334689</td>
+    <td class="tg-0lax">22334689</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">текст</td>
+    <td class="tg-0lax">ошибка</td>
+    <td class="tg-0lax">ошибка</td>
+  </tr>
+</tbody>
+</table>
+""",
     "SCREENSHOTS": """
 asdsa: dfgdfg
 input 567657
@@ -59,14 +115,14 @@ asdsa: ljkl
     "CONCLUSIONS": """
 В ходе выполнения данной работы на примере программы, выполняющей умножение целых чисел,
 были рассмотрены базовые принципы работы построения программ на языке C и обработки целых
-чисел:
-1. Организация ввода/вывода.
+чисел:<br>
+1. Организация ввода/вывода.<br>
 
-2. Разработка функций.
+2. Разработка функций.<br>
 
-3. Объявление и использование переменных.
+3. Объявление и использование переменных.<br>
 
-4. Выполнение простейших арифметических операций над целочисленными операндами.
+4. Выполнение простейших арифметических операций над целочисленными операндами.<br>
 """,
     **repl
 }
