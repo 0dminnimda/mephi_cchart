@@ -52,7 +52,7 @@ myst_enable_extensions = [
 ]
 
 mermaid_init_js = (
-    "mermaid.initialize({startOnLoad:true, flowchart: {useMaxWidth:false}});"
+    "mermaid.initialize({startOnLoad:true, flowchart: {useMaxWidth:false, curve:'linear'}});"
 )
 
 # Add any paths that contain templates here, relative to this directory.
