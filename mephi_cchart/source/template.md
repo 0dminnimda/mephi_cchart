@@ -64,10 +64,6 @@
 
 {GRAPH}
 
-<!-- ```{mermaid}
-{MERMAID-CODE}
-``` -->
-
 <font size="+2"><b>4. Исходные коды разработанных программ<b></font>
 
 Листинг 1: Исходные коды программы {PROGRAM-NAME} (файл: {PROGRAM-FILE})
