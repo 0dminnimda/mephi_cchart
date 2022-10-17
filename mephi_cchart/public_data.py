@@ -42,8 +42,9 @@ flowchart RL
 </div>
 """,
     "GRAPH": """
-<img alt="graph1" src="graph1.png">
-<img alt="graph2" src="graph2.png">
+<img width="600" alt="graph1" src="graph1.png">
+<br><br><br><br><br><br>
+<img width="600" alt="graph2" src="graph2.png">
     """,
     "PROGRAM-NAME": "lab1",
     "PROGRAM-FILE": "lab1.c",
