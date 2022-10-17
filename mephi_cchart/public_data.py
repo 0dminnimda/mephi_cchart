@@ -10,6 +10,7 @@ repl = {
     "PROBLEM": "Вариант №1.12 Дано целое число. Поменять местами цифры числа так, чтотобы получилось минимальное цисло из этих цифр.",
     "USED-DATA-TYPES": "При выполнении данной лабораторной работы использовался встроенный тип данных int, предназначенный для работы с целыми числами.",
     "MERMAID-CODE": """
+<div class="mermaid">
 flowchart RL
    subgraph SG0 [" "]
       direction TB
@@ -38,7 +39,12 @@ flowchart RL
       n1_2 --> |false| n1_4[/"вывести: It's not an integer ;(\nSorry, but you'll have to enter an integer next time!\n"/]
       n1_3 & n1_4 --> n1_5[конец]
    end
+</div>
 """,
+    "GRAPH": """
+<img alt="graph1" src="graph1.png">
+<img alt="graph2" src="graph2.png">
+    """,
     "PROGRAM-NAME": "lab1",
     "PROGRAM-FILE": "lab1.c",
     "C-CODE": """
