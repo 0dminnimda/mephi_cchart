@@ -159,6 +159,7 @@ cython_debug/
 /mephi_cchart/source/terminal.png
 /mephi_cchart/source/graph1.png
 /mephi_cchart/source/graph2.png
+/mephi_cchart/source/terminal_lab*.png
 
 /mephi_cchart/compilation/
 /mephi_cchart/private_data.py
