@@ -1,15 +1,15 @@
 from private_data import repl
 
 repl = {
-    "LAB-ID": 1,
     "LAB-TITLE": "Работа с массивами данных",
+    "LAB-ID": 2,
     "STUDENT-NAME": "",
     "GROUP-ID": "",
     "TEACHER-NAME": "",
     "LOCATION": "Москва",
     "YEAR": 2022,
-    "PROBLEM": "Вариант №1.12 Дано целое число. Поменять местами цифры числа так, чтотобы получилось минимальное цисло из этих цифр.",
-    "USED-DATA-TYPES": "При выполнении данной лабораторной работы использовался встроенный тип данных int, предназначенный для работы с целыми числами.",
+    "PROBLEM": "Вариант №23 Вычислить значение функции y = √n a в точке по итерационной формуле.",
+    "USED-DATA-TYPES": "При выполнении данной лабораторной работы использовался встроенный тип данных double, предназначенный для работы с дробными числами.",
     "MERMAID-CODE": """
 <div class="mermaid">
 flowchart RL
@@ -43,13 +43,27 @@ flowchart RL
 </div>
 """,
     "GRAPH": """
-<img width="600" alt="graph1" src="graph1.png">
-<br><br><br><br><br><br>
-<img width="600" alt="graph2" src="graph2.png">
+{PROGRAM-FILE}<br><br>
+<img width="490" alt="graph1" src="graph1.png">
+<img width="470" alt="graph2" src="graph2.png">
+<img width="500" alt="graph2" src="graph3.png">
+<br><br><br>
+{PROGRAM-FILE2}<br><br>
+<img width="500" alt="graph4" src="graph4.png">
+<img width="455" alt="graph2" src="graph2.png">
+<br><br>
+<img width="500" alt="graph5" src="graph5.png">
     """,
-    "PROGRAM-NAME": "lab1",
-    "PROGRAM-FILE": "lab1.c",
+    "PROGRAM-NAME": "root_iter",
+    "PROGRAM-FILE": "root_iter.c",
     "C-CODE": """
+int main() {
+   return 0;
+}
+""",
+    "PROGRAM-NAME2": "root_prec",
+    "PROGRAM-FILE2": "root_prec.c",
+    "C-CODE2": """
 int main() {
    return 0;
 }
@@ -62,51 +76,155 @@ int main() {
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">Значение a</th>
+    <th class="tg-0pky">Значение<br>степени корня</th>
+    <th class="tg-0pky">Значение x</th>
+    <th class="tg-0pky">Значение<br>количества итераций</th>
     <th class="tg-0pky">Ожидаемое значение<br>result</th>
     <th class="tg-0pky">Полученное значение<br>result</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky">55</td>
-    <td class="tg-0pky">55</td>
-    <td class="tg-0pky">55</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">20000002</td>
-    <td class="tg-0pky">22</td>
-    <td class="tg-0pky">22</td>
-  </tr>
-  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">4</td>
     <td class="tg-0pky">0</td>
+    <td class="tg-0pky">4</td>
+    <td class="tg-0pky">4</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">4</td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">2.5</td>
+    <td class="tg-0pky">2.5</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">4</td>
+    <td class="tg-0pky">15</td>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">2</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">19</td>
+    <td class="tg-0pky">8</td>
+    <td class="tg-0pky">2.66840199518129895</td>
+    <td class="tg-0pky">2.66840199518129895</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">7</td>
+    <td class="tg-0pky">925</td>
+    <td class="tg-0pky">150</td>
+    <td class="tg-0pky">2.65298340418130296</td>
+    <td class="tg-0pky">2.65298340418130296</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">текст</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
     <td class="tg-0pky">ошибка</td>
     <td class="tg-0pky">ошибка</td>
   </tr>
   <tr>
-    <td class="tg-0lax">20</td>
-    <td class="tg-0lax">2</td>
-    <td class="tg-0lax">2</td>
+    <td class="tg-0pky">Ctrl + D</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">ошибка</td>
+    <td class="tg-0pky">ошибка</td>
+  </tr>
+</tbody>
+</table>
+""",
+    "TEST-EXAMPLES2": """
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Значение<br>степени корня</th>
+    <th class="tg-0pky">Значение x</th>
+    <th class="tg-0pky">Значение<br>эпсилон</th>
+    <th class="tg-0pky">Ожидаемое значение<br>result</th>
+    <th class="tg-0pky">Полученное значение<br>result</th>
+    <th class="tg-0lax">Ожидаемое значение<br>количества итераций</th>
+    <th class="tg-0lax">Полученное значение<br>количества итераций</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">4</td>
+    <td class="tg-0pky">10</td>
+    <td class="tg-0pky">4</td>
+    <td class="tg-0pky">4</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">0</td>
   </tr>
   <tr>
-    <td class="tg-0lax">155</td>
-    <td class="tg-0lax">155</td>
-    <td class="tg-0lax">155</td>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">4</td>
+    <td class="tg-0pky">4</td>
+    <td class="tg-0pky">2.5</td>
+    <td class="tg-0pky">2.5</td>
+    <td class="tg-0lax">1</td>
+    <td class="tg-0lax">1</td>
   </tr>
   <tr>
-    <td class="tg-0lax">32849263</td>
-    <td class="tg-0lax">22334689</td>
-    <td class="tg-0lax">22334689</td>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">4</td>
+    <td class="tg-0pky">0.00000000001</td>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0lax">6</td>
+    <td class="tg-0lax">6</td>
   </tr>
   <tr>
-    <td class="tg-0lax">текст</td>
-    <td class="tg-0lax">ошибка</td>
-    <td class="tg-0lax">ошибка</td>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">19</td>
+    <td class="tg-0pky">0.00001</td>
+    <td class="tg-0pky">2.66840164872198971</td>
+    <td class="tg-0pky">2.66840164872198971</td>
+    <td class="tg-0lax">9</td>
+    <td class="tg-0lax">9</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">7</td>
+    <td class="tg-0pky">925</td>
+    <td class="tg-0pky">0.00000000000001</td>
+    <td class="tg-0pky">2.65298340418130296</td>
+    <td class="tg-0pky">2.65298340418130296</td>
+    <td class="tg-0lax">4</td>
+    <td class="tg-0lax">4</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">текст</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">ошибка</td>
+    <td class="tg-0pky">ошибка</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Ctrl + D</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">ошибка</td>
+    <td class="tg-0pky">ошибка</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
   </tr>
 </tbody>
 </table>
