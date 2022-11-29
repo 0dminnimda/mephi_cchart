@@ -2,6 +2,7 @@ from private_data import repl
 
 repl = {
     "LAB-ID": 1,
+    "LAB-TITLE": "Работа с массивами данных",
     "STUDENT-NAME": "",
     "GROUP-ID": "",
     "TEACHER-NAME": "",
