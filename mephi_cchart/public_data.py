@@ -1,15 +1,15 @@
 from private_data import repl
 
 repl = {
+    "LAB-ID": 3,
     "LAB-TITLE": "Работа с массивами данных",
-    "LAB-ID": 2,
     "STUDENT-NAME": "",
     "GROUP-ID": "",
     "TEACHER-NAME": "",
     "LOCATION": "Москва",
     "YEAR": 2022,
-    "PROBLEM": "Вариант №23 Вычислить значение функции y = √n a в точке по итерационной формуле.",
-    "USED-DATA-TYPES": "При выполнении данной лабораторной работы использовался встроенный тип данных double, предназначенный для работы с дробными числами.",
+    "PROBLEM": "Вариант №11 В исходной последовательности вещественных чисел найти те, дробная часть которых, представленная в виде целого числа, превышает по модулю их целую часть. Сформировать из данных чисел новую последовательность, удалив их из исходной.",
+    "USED-DATA-TYPES": "При выполнении данной лабораторной работы использовался встроенный тип данных double, предназначенный для работы с дробными числами, и long, предназначенный для работы с целыми числами.",
     "MERMAID-CODE": """
 <div class="mermaid">
 flowchart RL
@@ -43,16 +43,10 @@ flowchart RL
 </div>
 """,
     "GRAPH": """
-{PROGRAM-FILE}<br><br>
-<img width="490" alt="graph1" src="graph1.png">
-<img width="470" alt="graph2" src="graph2.png">
-<img width="500" alt="graph2" src="graph3.png">
+<img width="490" alt="graph1" src="graphs_lab3/graph1.png">
+<img width="470" alt="graph2" src="graphs_lab3/graph2.png">
+<img width="500" alt="graph3" src="graphs_lab3/graph3.png">
 <br><br><br>
-{PROGRAM-FILE2}<br><br>
-<img width="500" alt="graph4" src="graph4.png">
-<img width="455" alt="graph2" src="graph2.png">
-<br><br>
-<img width="500" alt="graph5" src="graph5.png">
     """,
     "PROGRAM-NAME": "root_iter",
     "PROGRAM-FILE": "root_iter.c",
