@@ -151,6 +151,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+/.vscode/
+
 /mephi_cchart/ChromeHtmlToPdf
 /mephi_cchart/source/final.pdf
 /mephi_cchart/source/final.html
