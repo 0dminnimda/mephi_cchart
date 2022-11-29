@@ -61,6 +61,10 @@ int main() {
    return 0;
 }
 """,
+    "PROGRAMS-TEMPLATE": """<p>Листинг {number}: Исходные коды программы {filename} (файл: {filepath})</p>
+        <pre>
+{code}
+</pre>""",
     "PROGRAM-NAME2": "root_prec",
     "PROGRAM-FILE2": "root_prec.c",
     "C-CODE2": """
