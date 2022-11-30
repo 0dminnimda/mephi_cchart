@@ -48,24 +48,6 @@ flowchart RL
 <img width="500" alt="graph3" src="graphs_lab3/graph3.png">
 <br><br><br>
     """,
-    "PROGRAM-NAME": "root_iter",
-    "PROGRAM-FILE": "root_iter.c",
-    "C-CODE": """
-int main() {
-   return 0;
-}
-""",
-    "PROGRAMS-TEMPLATE": """<p>Листинг {number}: Исходные коды программы {filename} (файл: {filepath})</p>
-        <pre>
-{code}
-</pre>""",
-    "PROGRAM-NAME2": "root_prec",
-    "PROGRAM-FILE2": "root_prec.c",
-    "C-CODE2": """
-int main() {
-   return 0;
-}
-""",
     "TEST-EXAMPLES": """
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
