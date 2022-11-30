@@ -60,152 +60,261 @@ flowchart RL
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">Значение<br>степени корня</th>
-    <th class="tg-0pky">Значение x</th>
-    <th class="tg-0pky">Значение<br>количества итераций</th>
-    <th class="tg-0pky">Ожидаемое значение<br>result</th>
-    <th class="tg-0pky">Полученное значение<br>result</th>
+    <th class="tg-0pky">Введённая команда</th>
+    <th class="tg-0pky">Вывод программы</th>
+    <th class="tg-0pky">Ожидаемый вывод программы</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">4</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">2.5</td>
-    <td class="tg-0pky">2.5</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">15</td>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">2</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">19</td>
-    <td class="tg-0pky">8</td>
-    <td class="tg-0pky">2.66840199518129895</td>
-    <td class="tg-0pky">2.66840199518129895</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">7</td>
-    <td class="tg-0pky">925</td>
-    <td class="tg-0pky">150</td>
-    <td class="tg-0pky">2.65298340418130296</td>
-    <td class="tg-0pky">2.65298340418130296</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">текст</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">ошибка</td>
-    <td class="tg-0pky">ошибка</td>
+    <td class="tg-0pky">Приветственное сообщение</td>
+    <td class="tg-0pky">Приветственное сообщение</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Ctrl + D</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">ошибка</td>
-    <td class="tg-0pky">ошибка</td>
-  </tr>
-</tbody>
-</table>
-""",
-    "TEST-EXAMPLES2": """
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky">Значение<br>степени корня</th>
-    <th class="tg-0pky">Значение x</th>
-    <th class="tg-0pky">Значение<br>эпсилон</th>
-    <th class="tg-0pky">Ожидаемое значение<br>result</th>
-    <th class="tg-0pky">Полученное значение<br>result</th>
-    <th class="tg-0lax">Ожидаемое значение<br>количества итераций</th>
-    <th class="tg-0lax">Полученное значение<br>количества итераций</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">10</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">0</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">2.5</td>
-    <td class="tg-0pky">2.5</td>
-    <td class="tg-0lax">1</td>
-    <td class="tg-0lax">1</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">0.00000000001</td>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0lax">6</td>
-    <td class="tg-0lax">6</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">19</td>
-    <td class="tg-0pky">0.00001</td>
-    <td class="tg-0pky">2.66840164872198971</td>
-    <td class="tg-0pky">2.66840164872198971</td>
-    <td class="tg-0lax">9</td>
-    <td class="tg-0lax">9</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">7</td>
-    <td class="tg-0pky">925</td>
-    <td class="tg-0pky">0.00000000000001</td>
-    <td class="tg-0pky">2.65298340418130296</td>
-    <td class="tg-0pky">2.65298340418130296</td>
-    <td class="tg-0lax">4</td>
-    <td class="tg-0lax">4</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">текст</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">ошибка</td>
-    <td class="tg-0pky">ошибка</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Ctrl + D</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">ошибка</td>
-    <td class="tg-0pky">ошибка</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-  </tr>
+<td class="tg-0pky">init</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[]
+</td>
+<td class="tg-0pky">[]
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">init 123.45 123.123 12.345 12 12.0 .34 0.34</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[123.45 123.123 12.345 12.0 12.0 0.34 0.34]
+</td>
+<td class="tg-0pky">[123.45 123.123 12.345 12.0 12.0 0.34 0.34]
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">process</td>
+<td class="tg-0pky">Removed [12.345 0.34 0.34]
+</td>
+<td class="tg-0pky">Removed [12.345 0.34 0.34]
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[123.45 123.123 12.0 12.0] + (3) empty items
+</td>
+<td class="tg-0pky">[123.45 123.123 12.0 12.0] + (3) empty items
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">insert 0 3.1415</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[3.1415 123.45 123.123 12.0 12.0] + (2) empty items
+</td>
+<td class="tg-0pky">[3.1415 123.45 123.123 12.0 12.0] + (2) empty items
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">insert 5 9</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[3.1415 123.45 123.123 12.0 12.0 9.0] + (1) empty items
+</td>
+<td class="tg-0pky">[3.1415 123.45 123.123 12.0 12.0 9.0] + (1) empty items
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">insert 3 8</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[3.1415 123.45 123.123 8.0 12.0 12.0 9.0]
+</td>
+<td class="tg-0pky">[3.1415 123.45 123.123 8.0 12.0 12.0 9.0]
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">insert 7 0</td>
+<td class="tg-0pky">Invalid operation, there are no empty items left
+Try to resize the data or remove some elements
+</td>
+<td class="tg-0pky">Invalid operation, there are no empty items left
+Try to resize the data or remove some elements
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">insert 2 9</td>
+<td class="tg-0pky">Invalid operation, there are no empty items left
+Try to resize the data or remove some elements
+</td>
+<td class="tg-0pky">Invalid operation, there are no empty items left
+Try to resize the data or remove some elements
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">remove 0</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[123.45 123.123 8.0 12.0 12.0 9.0] + (1) empty items
+</td>
+<td class="tg-0pky">[123.45 123.123 8.0 12.0 12.0 9.0] + (1) empty items
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">insert 0 dfgdfg</td>
+<td class="tg-0pky">Incorrect input, expected value (Rational)
+</td>
+<td class="tg-0pky">Incorrect input, expected value (Rational)
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">resize 4</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[123.45 123.123 8.0 12.0]
+</td>
+<td class="tg-0pky">[123.45 123.123 8.0 12.0]
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">resize 10</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[123.45 123.123 8.0 12.0] + (6) empty items
+</td>
+<td class="tg-0pky">[123.45 123.123 8.0 12.0] + (6) empty items
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">resize 0</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[]
+</td>
+<td class="tg-0pky">[]
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">resize -1</td>
+<td class="tg-0pky">Could not resize the Vector to 18446744073709551615
+</td>
+<td class="tg-0pky">Could not resize the Vector to 18446744073709551615
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">remove 0</td>
+<td class="tg-0pky">Invalid index (0), expected to be less than length (0)
+</td>
+<td class="tg-0pky">Invalid index (0), expected to be less than length (0)
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">resize 3</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">remove 0</td>
+<td class="tg-0pky">Invalid index (0), expected to be less than length (0)
+</td>
+<td class="tg-0pky">Invalid index (0), expected to be less than length (0)
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">insert 0 1</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">print</td>
+<td class="tg-0pky">[1.0] + (2) empty items
+</td>
+<td class="tg-0pky">[1.0] + (2) empty items
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">remove 0</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">insert 0 1</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">remove 2</td>
+<td class="tg-0pky">Invalid index (2), expected to be less than length (1)
+</td>
+<td class="tg-0pky">Invalid index (2), expected to be less than length (1)
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">help print</td>
+<td class="tg-0pky">- 'print': Prints the state of the data
+   Use: print [--less]
+   Example: print
+</td>
+<td class="tg-0pky">- 'print': Prints the state of the data
+   Use: print [--less]
+   Example: print
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">exit</td>
+<td class="tg-0pky">Exiting ...
+<td class="tg-0pky">Exiting ...
+</tr>
 </tbody>
 </table>
 """,
