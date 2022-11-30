@@ -161,20 +161,16 @@ flowchart RL
 </tr>
 <tr>
 <td class="tg-0pky">insert 7 0</td>
-<td class="tg-0pky">Invalid operation, there are no empty items left
-Try to resize the data or remove some elements
+<td class="tg-0pky">Ошибка
 </td>
-<td class="tg-0pky">Invalid operation, there are no empty items left
-Try to resize the data or remove some elements
+<td class="tg-0pky">Ошибка
 </td>
 </tr>
 <tr>
 <td class="tg-0pky">insert 2 9</td>
-<td class="tg-0pky">Invalid operation, there are no empty items left
-Try to resize the data or remove some elements
+<td class="tg-0pky">Ошибка
 </td>
-<td class="tg-0pky">Invalid operation, there are no empty items left
-Try to resize the data or remove some elements
+<td class="tg-0pky">Ошибка
 </td>
 </tr>
 <tr>
@@ -193,9 +189,9 @@ Try to resize the data or remove some elements
 </tr>
 <tr>
 <td class="tg-0pky">insert 0 dfgdfg</td>
-<td class="tg-0pky">Incorrect input, expected value (Rational)
+<td class="tg-0pky">Ошибка
 </td>
-<td class="tg-0pky">Incorrect input, expected value (Rational)
+<td class="tg-0pky">Ошибка
 </td>
 </tr>
 <tr>
@@ -242,16 +238,16 @@ Try to resize the data or remove some elements
 </tr>
 <tr>
 <td class="tg-0pky">resize -1</td>
-<td class="tg-0pky">Could not resize the Vector to 18446744073709551615
+<td class="tg-0pky">Ошибка
 </td>
-<td class="tg-0pky">Could not resize the Vector to 18446744073709551615
+<td class="tg-0pky">Ошибка
 </td>
 </tr>
 <tr>
 <td class="tg-0pky">remove 0</td>
-<td class="tg-0pky">Invalid index (0), expected to be less than length (0)
+<td class="tg-0pky">Ошибка
 </td>
-<td class="tg-0pky">Invalid index (0), expected to be less than length (0)
+<td class="tg-0pky">Ошибка
 </td>
 </tr>
 <tr>
@@ -263,9 +259,9 @@ Try to resize the data or remove some elements
 </tr>
 <tr>
 <td class="tg-0pky">remove 0</td>
-<td class="tg-0pky">Invalid index (0), expected to be less than length (0)
+<td class="tg-0pky">Ошибка
 </td>
-<td class="tg-0pky">Invalid index (0), expected to be less than length (0)
+<td class="tg-0pky">Ошибка
 </td>
 </tr>
 <tr>
@@ -298,26 +294,22 @@ Try to resize the data or remove some elements
 </tr>
 <tr>
 <td class="tg-0pky">remove 2</td>
-<td class="tg-0pky">Invalid index (2), expected to be less than length (1)
+<td class="tg-0pky">Ошибка
 </td>
-<td class="tg-0pky">Invalid index (2), expected to be less than length (1)
+<td class="tg-0pky">Ошибка
 </td>
 </tr>
 <tr>
 <td class="tg-0pky">help print</td>
-<td class="tg-0pky">- 'print': Prints the state of the data
-   Use: print [--less]
-   Example: print
+<td class="tg-0pky">Сообщение с помощью
 </td>
-<td class="tg-0pky">- 'print': Prints the state of the data
-   Use: print [--less]
-   Example: print
+<td class="tg-0pky">Сообщение с помощью
 </td>
 </tr>
 <tr>
 <td class="tg-0pky">exit</td>
-<td class="tg-0pky">Exiting ...
-<td class="tg-0pky">Exiting ...
+<td class="tg-0pky">Сообщение о выходе
+<td class="tg-0pky">Сообщение о выходе
 </tr>
 </tbody>
 </table>
