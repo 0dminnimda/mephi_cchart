@@ -48,6 +48,10 @@ flowchart RL
 <img width="500" alt="graph3" src="graphs_lab3/graph3.png">
 <br><br><br>
     """,
+    "PROGRAMS-TEMPLATE": """<p>Листинг {number}: Исходные коды программы {filename} (файл: {filepath})</p>
+        <pre>
+{code}
+</pre>""",
     "TEST-EXAMPLES": """
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
