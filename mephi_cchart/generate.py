@@ -1,5 +1,6 @@
 import html
 import os
+import sys
 from pathlib import Path
 
 from html2pdf import render_pdf
@@ -75,6 +76,18 @@ def filter_files(directory: str, *filters: str) -> list[str]:
     return [str(file) for filter in filters for file in glob(filter)]
 
 
+def get_test_cases(directory: str) -> str:
+    path = Path(directory)
+
+    os.system(f"{sys.executable} {path / 'test.py'} make_cases")
+
+    # namespace = {"__builtins__": __builtins__, "__name__": ""}
+    # exec((path / "test.py").read_text("utf-8"), namespace, {})
+    # namespace["main"]([__file__, "make_cases"])  # type: ignore
+
+    return (path / "test_cases.txt").read_text("utf-8")
+
+
 if __name__ == "__main__":
     import fix_dir
 
@@ -86,6 +99,10 @@ if __name__ == "__main__":
     regenerate_template(template)
 
     add_code("PROGRAMS", *filter_files(lab_folder, "*.h", "*.c"))
+    add_code("TESTER", *filter_files(lab_folder, "test.py"))
+
+    repl["TEST-EXAMPLES"] = "<pre>\n" + as_code(get_test_cases(lab_folder)) + "</pre>"
     # repl["TEST-EXAMPLES"] = run_n_record(name, image)
+
     make_final_html(template, repl, final)
     print(render_pdf(final))
