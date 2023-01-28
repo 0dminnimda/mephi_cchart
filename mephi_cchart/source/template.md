@@ -1,3 +1,5 @@
+<!-- TEMPLATE-START -->
+
 <style>
  #container {
    display: flex;
@@ -26,7 +28,7 @@
   <img width="200" alt="ksit_logo" src="_static/ksit_logo.svg">
 </div>
 
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 
 <p align="center">
    <font size="+1">
@@ -48,6 +50,8 @@
    <b>Преподаватель:</b> {TEACHER-NAME}<br>
 </p>
 
+<br><br><br><br><br><br>
+
 <p align="center">
    {LOCATION} — {YEAR}
 </p>
@@ -68,16 +72,18 @@
 
 {PROGRAMS}
 
-<font size="+2"><b>5. Описание тестовых примеров<b></font>
+<font size="+2"><b>5. Тестовые наборы и тестирующая программа<b></font>
 
 {TEST-EXAMPLES}
 
-<font size="+2"><b>6. Скриншоты<b></font>
+{TESTER}
 
-<img width="450" alt="terminal" src="terminal.png">
+<font size="+2"><b>6. Сравнительный анализ времени, потраченного на решение задачи программами<b></font>
 
-Рис. 3: Сборка и запуск программы {PROGRAM-NAME}
+{TIMING}
 
 <font size="+2"><b>7. Выводы<b></font>
 
 {CONCLUSIONS}
+
+<!-- TEMPLATE-END -->
