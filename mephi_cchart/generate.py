@@ -6,6 +6,7 @@ from html2pdf import render_pdf
 from public_data import repl
 from terminal import render_terminal_png
 from tester import compile_program, run_program
+from update_template import regenerate_template
 
 # def run_n_record(filename: str, terminal: str) -> str:
 #     exe = compile_program(filename)
@@ -69,6 +70,8 @@ if __name__ == "__main__":
     final = "./source/final.html"
     image = "./source/terminal.png"
     lab_folder = "../../mephi_labs/lab" + str(repl["LAB-ID"])
+
+    regenerate_template(template)
 
     add_code("PROGRAMS", *filter_files(lab_folder, "*.h", "*.c"))
     # repl["TEST-EXAMPLES"] = run_n_record(name, image)
