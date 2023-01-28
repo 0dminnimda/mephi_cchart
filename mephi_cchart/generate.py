@@ -29,23 +29,35 @@ from update_template import regenerate_template
 #     return "user: ".join(runs)
 
 
+def break_line_by_length(line: str, max_length: int = 85, sep: str = "\n") -> str:
+    sub_lines = []
+    while line:
+        sub_lines.append(line[:max_length])
+        line = line[max_length:]
+    return sep.join(sub_lines)
+
+
+def as_code(text: str) -> str:
+    lines = text.splitlines()
+    max_lineno_len = len(str(len(lines)))
+    out_lines = []
+    for i, line in enumerate(lines):
+        prefix = str(i) + " " * (max_lineno_len - len(str(i)) + 2)
+        line = prefix + break_line_by_length(line, sep="\n" + " "*len(prefix))
+        out_lines.append(line)
+    return html.escape("\n".join(out_lines))
+
+
 def add_code(key: str, *files: str) -> None:
     repl[key] = ""
     template = repl[key + "-TEMPLATE"]
     for ind, file in enumerate(files):
         path = Path(file)
-        text = path.read_text()
-        lines = text.splitlines()
-        max_len = len(str(len(lines)))
-        lines = [
-            str(i) + " " * (max_len - len(str(i)) + 2) + ln
-            for i, ln in enumerate(lines)
-        ]
         repl[key] += template.format(
             number=ind + 1,
             filename=path.stem,
             filepath=path.name,
-            code=html.escape("\n".join(lines)),
+            code=as_code(path.read_text()),
         )
 
 
