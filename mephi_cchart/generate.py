@@ -44,7 +44,7 @@ def as_code(text: str) -> str:
     out_lines = []
     for i, line in enumerate(lines):
         prefix = str(i) + " " * (max_lineno_len - len(str(i)) + 2)
-        line = prefix + break_line_by_length(line, sep="\n" + " "*len(prefix))
+        line = prefix + break_line_by_length(line, sep="\n" + " " * len(prefix))
         out_lines.append(line)
     return html.escape("\n".join(out_lines))
 
