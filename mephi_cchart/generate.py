@@ -62,11 +62,15 @@ def add_code(key: str, *files: str) -> None:
         )
 
 
+def escape_custom_html(string: str) -> str:
+    return string.replace("\<", html.escape("<")).replace("\>", html.escape(">"))
+
+
 def make_final_html(template: str, repl: dict, final: str) -> None:
     text = Path(template).read_text("utf-8")
 
     for name, value in repl.items():
-        text = text.replace("{" + name + "}", str(value))
+        text = text.replace("{" + name + "}", escape_custom_html(str(value)))
 
     Path(final).write_text(text, "utf-8")
 
