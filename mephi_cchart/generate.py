@@ -80,10 +80,11 @@ def filter_files(directory: str, *filters: str) -> list[str]:
     return [str(file) for filter in filters for file in glob(filter)]
 
 
-def get_test_cases(directory: str) -> str:
+def get_test_cases(directory: str, run: bool = True) -> str:
     path = Path(directory)
 
-    os.system(f"{sys.executable} {path / 'test.py'} make_cases")
+    if run:
+        os.system(f"{sys.executable} {path / 'test.py'} make_cases")
 
     # namespace = {"__builtins__": __builtins__, "__name__": ""}
     # exec((path / "test.py").read_text("utf-8"), namespace, {})
@@ -105,7 +106,9 @@ if __name__ == "__main__":
     add_code("PROGRAMS", *filter_files(lab_folder, "*.h", "*.c"))
     add_code("TESTER", *filter_files(lab_folder, "test.py"))
 
-    repl["TEST-EXAMPLES"] = "<pre>\n" + as_code(get_test_cases(lab_folder)) + "</pre>"
+    repl["TEST-EXAMPLES"] = (
+        f"<pre>\n" + as_code(get_test_cases(lab_folder, run=False)) + "</pre>"
+    )
     # repl["TEST-EXAMPLES"] = run_n_record(name, image)
 
     make_final_html(template, repl, final)
