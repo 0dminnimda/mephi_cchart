@@ -369,7 +369,7 @@ asdsa: ljkl
 
 2. Разработка функций.<br>
 
-3. Устройство функции readline и <string.h>.<br>
+3. Устройство функции readline и \<string.h\>.<br>
 
 4. Использование malloc, realloc и free.<br>
 """,
