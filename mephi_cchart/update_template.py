@@ -22,6 +22,27 @@ def set_between(text: str, start: str, end: str, repl: str) -> str:
     return text[:s] + repl + text[e:]
 
 
+def indent_between(text: str, start: str, end: str) -> str:
+    start = start.replace("\n", "")
+    end = end.replace("\n", "")
+    result = ""
+    indent = ""
+    inside = False
+    for line in text.split("\n"):
+        if start in line:
+            indent = line[:line.find(start)]
+            inside = True
+        elif inside and line:
+            result += indent
+
+        if end in line:
+            indent = ""
+            inside = False
+
+        result += line + "\n"
+    return result[:-1]
+
+
 def format_html(text: str) -> str:
     # from bs4 import BeautifulSoup
 
@@ -45,7 +66,7 @@ def implant_html(from_file: str, to_file: str) -> None:
 
     changed_html = get_between(made.read_text("utf-8"), START, END)
     new_html = set_between(target.read_text("utf-8"), START, END, changed_html)
-    target.write_text(format_html(new_html), "utf-8")
+    target.write_text(indent_between(new_html, START, END), "utf-8")
 
 
 def regenerate_template(
