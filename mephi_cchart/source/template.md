@@ -1,15 +1,16 @@
 <!-- TEMPLATE-START -->
 
 <style>
- #container {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: nowrap;
-   justify-content: space-between;
- }
- #container > img {
-   object-fit: contain;
- }
+   #container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+   }
+
+   #container>img {
+      object-fit: contain;
+   }
 </style>
 
 <p align="center">
@@ -23,9 +24,9 @@
 <br>
 
 <div id="container">
-  <img width="200" alt="logo_mifi" src="_static/logo_mifi.png">
-  <img width="200" alt="icis_logo" src="_static/icis_logo.jpg">
-  <img width="200" alt="ksit_logo" src="_static/ksit_logo.svg">
+   <img width="200" alt="logo_mifi" src="_static/logo_mifi.png">
+   <img width="200" alt="icis_logo" src="_static/icis_logo.jpg">
+   <img width="200" alt="ksit_logo" src="_static/ksit_logo.svg">
 </div>
 
 <br><br><br><br><br><br><br><br><br><br>
