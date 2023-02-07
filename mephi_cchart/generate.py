@@ -30,7 +30,7 @@ from update_template import regenerate_template
 #     return "user: ".join(runs)
 
 
-def break_line_by_length(line: str, max_length: int = 85, sep: str = "\n") -> str:
+def break_line_by_length(line: str, max_length: int = 90, sep: str = "\n") -> str:
     sub_lines = []
     while line:
         sub_lines.append(line[:max_length])
@@ -84,7 +84,7 @@ def get_test_cases(directory: str, run: bool = True) -> str:
     path = Path(directory)
 
     if run:
-        os.system(f"{sys.executable} {path / 'test.py'} make_cases")
+        os.system(f"{sys.executable!r} {path / 'test.py'} make_cases")
 
     # namespace = {"__builtins__": __builtins__, "__name__": ""}
     # exec((path / "test.py").read_text("utf-8"), namespace, {})
@@ -122,4 +122,5 @@ if __name__ == "__main__":
     # repl["TEST-EXAMPLES"] = run_n_record(name, image)
 
     make_final_html(template, repl, final)
-    print(render_pdf(final))
+    # print(render_pdf(final))
+    print("End")
