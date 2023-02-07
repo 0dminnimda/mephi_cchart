@@ -93,6 +93,15 @@ def get_test_cases(directory: str, run: bool = True) -> str:
     return (path / "test_cases.txt").read_text("utf-8")
 
 
+def get_test_output(directory: str, run: bool = True) -> str:
+    path = Path(directory)
+
+    if run:
+        os.system(f"{sys.executable!r} {path / 'test.py'}")
+
+    return (path / "test.output").read_text("utf-8")
+
+
 if __name__ == "__main__":
     import fix_dir
 
@@ -107,7 +116,8 @@ if __name__ == "__main__":
     add_code("TESTER", *filter_files(lab_folder, "test.py"))
 
     repl["TEST-EXAMPLES"] = (
-        f"<pre>\n" + as_code(get_test_cases(lab_folder, run=False)) + "</pre>"
+        f"<pre>\n" + as_code(get_test_output(lab_folder)) + "</pre>"
+        # f"<pre>\n" + as_code(get_test_cases(lab_folder, run=False)) + "</pre>"
     )
     # repl["TEST-EXAMPLES"] = run_n_record(name, image)
 
