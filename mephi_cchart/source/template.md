@@ -29,7 +29,7 @@
    <img width="200" alt="ksit_logo" src="_static/ksit_logo.svg">
 </div>
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 
 <p align="center">
    <font size="+1">
@@ -43,7 +43,7 @@
    </font>
 </p>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 
 <p align="right">
    <b>Студент:</b> {STUDENT-NAME}<br>
@@ -51,7 +51,7 @@
    <b>Преподаватель:</b> {TEACHER-NAME}<br>
 </p>
 
-<br><br><br><br><br><br>
+<br><br><br>
 
 <p align="center">
    {LOCATION} — {YEAR}
