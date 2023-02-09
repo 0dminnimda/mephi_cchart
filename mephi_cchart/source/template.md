@@ -21,7 +21,7 @@
    </font>
 </p>
 
-<br>
+<br><br><br><br>
 
 <div id="container">
    <img width="200" alt="logo_mifi" src="_static/logo_mifi.png">
@@ -29,7 +29,7 @@
    <img width="200" alt="ksit_logo" src="_static/ksit_logo.svg">
 </div>
 
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 
 <p align="center">
    <font size="+1">
@@ -43,7 +43,7 @@
    </font>
 </p>
 
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <p align="right">
    <b>Студент:</b> {STUDENT-NAME}<br>
@@ -51,7 +51,7 @@
    <b>Преподаватель:</b> {TEACHER-NAME}<br>
 </p>
 
-<br><br><br>
+<br><br><br><br><br><br>
 
 <p align="center">
    {LOCATION} — {YEAR}
@@ -79,11 +79,11 @@
 
 {TESTER}
 
-<font size="+2"><b>6. Сравнительный анализ времени, потраченного на решение задачи сотировками<b></font>
+<!-- <font size="+2"><b>6. Сравнительный анализ времени, потраченного на решение задачи сотировками<b></font>
 
-{TIMING}
+{TIMING} -->
 
-<font size="+2"><b>7. Выводы<b></font>
+<font size="+2"><b>6. Выводы<b></font>
 
 {CONCLUSIONS}
 

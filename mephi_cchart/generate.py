@@ -116,8 +116,8 @@ if __name__ == "__main__":
     add_code("TESTER", *filter_files(lab_folder, "test.py"))
 
     repl["TEST-EXAMPLES"] = (
-        f"<pre>\n" + as_code(get_test_output(lab_folder)) + "</pre>"
-        # f"<pre>\n" + as_code(get_test_cases(lab_folder, run=False)) + "</pre>"
+        # f"<pre>\n" + as_code(get_test_output(lab_folder)) + "</pre>"
+        f"<pre>\n" + as_code(get_test_cases(lab_folder)) + "</pre>"
     )
     # repl["TEST-EXAMPLES"] = run_n_record(name, image)
 
