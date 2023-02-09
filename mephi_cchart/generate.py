@@ -58,7 +58,7 @@ def add_code(key: str, *files: str) -> None:
             number=ind + 1,
             filename=path.stem,
             filepath=path.name,
-            code=as_code(path.read_text()),
+            code=as_code(path.read_text("utf-8")),
         )
 
 
